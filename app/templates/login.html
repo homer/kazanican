@@ -1,0 +1,15 @@
+<form name="loginForm" ng-submit="loginUser(user)">
+  <h2 class="brand-text text-center">Kazanican</h2>
+  <h3 class="text-center">Kullanıcı Girişi</h3>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="user.email" placeholder="email@adresim.com" autofocus>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" ng-model="user.password" placeholder="şifrem">
+  </div>
+  <div class="form-group">
+    <p class="text-center">
+      <input type="submit" value="Giriş Yap" class="btn btn-primary">
+    </p>
+  </div>
+</form>

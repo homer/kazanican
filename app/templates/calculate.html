@@ -1,0 +1,32 @@
+<h1>Hesaplayıcı</h1>
+<form ng-submit="calculateFinishDate(user)">
+  <div class="form-group">
+    <label>Doğum Tarihin
+      <input type="date" class="form-control" ng-model="user.birthday">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Kaç yaşında namaz kılmakla farz olundun?
+      <input type="number" class="form-control" ng-model="user.ageOfMaturity">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Kaç senedir namaz kılıyorsun?
+      <input type="number" class="form-control" ng-model="user.prayingYears">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Günde kaç vakit kaza namazı kılabilirsin?
+      <input type="number" class="form-control" ng-model="user.commitPerDay">
+    </label>
+  </div>
+  <input type="submit" class="btn btn-default" value="Ne zamana bitecegini hesapla">
+</form>
+
+<div class="message-box" ng-show="dayOfFinish">
+  <p class="lead">Yaklaşık {{ yearsOfResponsibility }} yıl içinde bu iş tamam! Zaman su gibi akıp geçiyor... Hiç merak etme!</p>
+
+  <p>Bugünden itibaren <u>günde {{ user.commitPerDay }} vakit kaza namazı</u> kılabilirsen, <b>{{ dayOfFinish | date:'d MMMM yyyy EEEE' }}</b> günü kazalarını tamamlamış olacaksın!</p>
+
+  <button class="btn btn-primary" ng-click="makeCommit()">Hadi o zaman baslayalim!</button>
+</div>

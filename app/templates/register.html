@@ -1,0 +1,17 @@
+<form class="narrow-form-container" name="myForm" ng-submit="register(user)">
+  <h2 class="text-center">Kazanican</h2>
+  <h3 class="text-center">Yeni Kullanıcı Kayıtı</h3>
+  <div class="form-group">
+    <input type="email" class="form-control" ng-model="user.email" placeholder="Email Adresiniz">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" ng-model="user.password" placeholder="Şifreniz">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="user.firstname" placeholder="Adınız">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="user.lastname" placeholder="Soyadınız">
+  </div>
+  <p class="text-center"><input type="submit" class="btn btn-primary" value="Kaydet"></p>
+</form>
